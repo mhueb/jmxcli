@@ -1,7 +1,7 @@
 jmxcli
 ======
 
-Simple jmx command line utility
+Simple light weihgt jmx command line utility.
 
 
 usage
@@ -28,7 +28,7 @@ example
 	
 deployment
 ----------
-
+jmxcli is just one small jar.
 ```
 jmxcli/
 	jmxcli.bat
@@ -38,4 +38,5 @@ jmxcli/
 		<optional jars>
 ```
 
-For use with jboss-as 7 add jboss-client.jar int lib folder.
+You may need additional jars to support special protocols.
+For use with jboss-as-7 add jboss-client.jar into lib folder.
