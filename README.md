@@ -1,7 +1,7 @@
 jmxcli
 ======
 
-Simple light weihgt jmx command line utility.
+Simple light weight jmx command line utility.
 
 
 usage
