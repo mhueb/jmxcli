@@ -10,20 +10,23 @@ usage
 jmxcli {commands} {options}
 
 commands:
-	lo                                    List available objects
-	la <object name>                      List available attributes
-	get <object name> <attribute name>    Get attribute value
+	lo                                               List available objects
+	la <object name>                                 List available attributes
+	get <object name> <attribute name> [-key key]    Get attribute value
 	
 options:
-	-s <server>                           JMX server
-	-user <username>                      Username for authentication
-	-password <password>                  Password for authentication
+	-s <server>                                      JMX server
+	-user <username>                                 Username for authentication
+	-password <password>                             Password for authentication
+	-key <key>                                       Composite key path
 ```
 
 example
 -------
 ```
-	jmxcli.sh -s service:jmx:remoting-jmx://somehost:4447 lo
+	jmxcli.sh -s service:jmx:remoting-jmx://localhost:4447 lo
+	jmxcli.sh -s service:jmx:remoting-jmx://localhost:4447 get java.lang:type=Threading ThreadCount
+	jmxcli.sh -s service:jmx:remoting-jmx://localhost:4447 get java.lang:type=Memory HeapMemoryUsage -key used,init
 ```	
 	
 deployment
